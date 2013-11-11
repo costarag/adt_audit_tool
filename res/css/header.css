@@ -1,0 +1,29 @@
+#bar {
+	vertical-align: middle;
+	padding: 5px 10px 5px 5px;
+	background-color: #FFFFFF;
+	padding: 5px 10px 5px 5px;
+	height: 75px;
+	border: 1px solid #CECECE;
+}
+
+#headerMenu {
+	float: left;
+	height: 75px;
+	vertical-align: bottom;
+	margin: 0px auto;
+}
+
+#headerLogo {
+	float: left;
+	width: 15%;
+	font-style: normal;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+
+#headerLogin {
+	float: right;
+	padding-top: 58px;
+}
