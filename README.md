@@ -1,6 +1,6 @@
 ## ADT - Audit Tool	
 
-ADT is a web based system created to grab data from MyAIESEC.net and organize it focusing on audit of exchange documents (Contracts, Acceptance Notes and more). System also allow audit Legal and Terms documents.
+ADT is a web system created to track status of relevant audit documents. The system grabs data from MyAIESEC.net, stores in a database and enable users visualize and/or edit status of exchange and legal documents. Splitted by areas.
 
 ### Technologies
 
