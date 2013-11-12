@@ -8,16 +8,12 @@ Util::requireLogin();
 <head>
 <title>ADT Tool - AIESEC in Brazil</title>
 
-<link rel="stylesheet" type="text/css" href="res/css/demo_table.css" />
-<link rel="stylesheet" type="text/css" href="res/css/demo_page.css" />
-<link rel="stylesheet" type="text/css" href="res/css/header.ccss.css" />
-<link rel="stylesheet" type="text/css"
-	href="res/css/smoothness/jquery-ui-1.9.1.custom.css" />
+<link rel="stylesheet" type="text/css" href="res/css/smoothness/jquery-ui-1.9.1.custom.css" />
 <link rel="stylesheet" type="text/css" href="res/css/header.css" />
 <link rel="stylesheet" type="text/css" href="res/css/styles.css" />
 
 <script src="res/js/jquery-1.8.2.js"></script>
-<script src="res/js/jquery-ui-1.9.1.custom.js"></script>
+<script src="res/js/jquery-ui-1.9.1.custom.min.js"></script>
 
 <script src="res/js/jquery.noty.js"></script>
 <script src="res/js/jquery.noty.top.js"></script>
@@ -330,7 +326,7 @@ $(document).ready(function() {
 		);
 	}
 
-	$.getJSON("startup.php", function(result) {
+	$.getJSON("actions/startup.php", function(result) {
 	    var options = $("#clId");
 	    $.each(result.cls, function() {
 	        options.append($("<option />").val(this.clID).text(this.name));
@@ -556,7 +552,7 @@ $(document).ready(function() {
 		$("#left").html("");
 		$("#right").html("");
 		
-		$.getJSON("loadSummary.php?cl=" + $("#clId").val() +"&period="+ $("#periodId").val(), function(data) {
+		$.getJSON("actions/loadSummary.php?cl=" + $("#clId").val() +"&period="+ $("#periodId").val(), function(data) {
 			var summary = String(data);
 			if(summary != ""){
 				var summary =  '<table id="summarytable" style="float:left;">';
@@ -789,7 +785,7 @@ $(document).ready(function() {
 		$("#left").html("");
 		$("#right").html("");
 		
-		$.getJSON("loadSummaryConference.php?cl=" + $("#clId").val() +"&period="+ $("#periodId").val(), function(data) {
+		$.getJSON("actions/loadSummaryConference.php?cl=" + $("#clId").val() +"&period="+ $("#periodId").val(), function(data) {
 			var summary = String(data);
 			//alert(summary);
 			if(summary != ""){
@@ -1112,7 +1108,7 @@ $(document).ready(function() {
 
 					$("#showHistoryGCDPI").click(function(){
 
-						$.getJSON("loadHistory.php?type=" + metaType+"&doc=" + metaDoc+"&form="+metaForm+"&cl="+$("#clId").val() +"&period="+ $("#periodId").val(), function(data) {
+						$.getJSON("actions/loadHistory.php?type=" + metaType+"&doc=" + metaDoc+"&form="+metaForm+"&cl="+$("#clId").val() +"&period="+ $("#periodId").val(), function(data) {
 							
 							$("#history").dialog({
 								title: "History - "+metaForm +': ' + (""+metaDoc).toUpperCase(),
@@ -1159,7 +1155,7 @@ $(document).ready(function() {
 						$('.taskStatusGCDPI').css('border', '1px solid #000');
 						$.ajax({
 							   type: "POST",
-							   url: "updateForm.php?type=" + metaType+"&doc=" + metaDoc+"&form="+metaForm+"&status="+value+"&period="+ $("#periodId").val(),
+							   url: "actions/updateForm.php?type=" + metaType+"&doc=" + metaDoc+"&form="+metaForm+"&status="+value+"&period="+ $("#periodId").val(),
 							   data: $('#editStatusGCDPIForm').serialize(),
 							   success: function(data){
 									$('#editStatusGCDPI_status').val(0);
@@ -1461,7 +1457,7 @@ $(document).ready(function() {
 
 					$("#showHistoryGIPO").click(function(){
 
-						$.getJSON("loadHistory.php?type=" + metaType+"&doc=" + metaDoc+"&form="+metaForm+"&cl="+$("#clId").val() +"&period="+ $("#periodId").val(), function(data) {
+						$.getJSON("actions/loadHistory.php?type=" + metaType+"&doc=" + metaDoc+"&form="+metaForm+"&cl="+$("#clId").val() +"&period="+ $("#periodId").val(), function(data) {
 							
 							$("#history").dialog({
 								title: "History - "+metaForm +': ' + (""+metaDoc).toUpperCase(),
@@ -1508,7 +1504,7 @@ $(document).ready(function() {
 						$('.taskStatusGIPO').css('border', '1px solid #000');
 						$.ajax({
 							   type: "POST",
-							   url: "updateForm.php?type=" + metaType+"&doc=" + metaDoc+"&form="+metaForm+"&status="+value+"&period="+ $("#periodId").val(),
+							   url: "actions/updateForm.php?type=" + metaType+"&doc=" + metaDoc+"&form="+metaForm+"&status="+value+"&period="+ $("#periodId").val(),
 							   data: $('#editStatusGIPOForm').serialize(),
 							   success: function(data){
 									$('#editStatusGIPO_status').val(0);
@@ -1811,7 +1807,7 @@ $(document).ready(function() {
 
 					$("#showHistoryGIPI").click(function(){
 
-						$.getJSON("loadHistory.php?type=" + metaType+"&doc=" + metaDoc+"&form="+metaForm+"&cl="+$("#clId").val() +"&period="+ $("#periodId").val(), function(data) {
+						$.getJSON("actions/loadHistory.php?type=" + metaType+"&doc=" + metaDoc+"&form="+metaForm+"&cl="+$("#clId").val() +"&period="+ $("#periodId").val(), function(data) {
 							
 							$("#history").dialog({
 								title: "History - "+metaForm +': ' + (""+metaDoc).toUpperCase(),
@@ -1858,7 +1854,7 @@ $(document).ready(function() {
 						$('.taskStatusGIPI').css('border', '1px solid #000');
 						$.ajax({
 							   type: "POST",
-							   url: "updateForm.php?type=" + metaType+"&doc=" + metaDoc+"&form="+metaForm+"&status="+value+"&period="+ $("#periodId").val(),
+							   url: "actions/updateForm.php?type=" + metaType+"&doc=" + metaDoc+"&form="+metaForm+"&status="+value+"&period="+ $("#periodId").val(),
 							   data: $('#editStatusGIPIForm').serialize(),
 							   success: function(data){
 									$('#editStatusGIPI_status').val(0);
@@ -2058,7 +2054,7 @@ $(document).ready(function() {
 
 					$("#showHistoryGCDPO").click(function(){
 
-						$.getJSON("loadHistory.php?type=" + metaType+"&doc=" + metaDoc+"&form="+metaForm+"&cl="+$("#clId").val() +"&period="+ $("#periodId").val(), function(data) {
+						$.getJSON("actions/loadHistory.php?type=" + metaType+"&doc=" + metaDoc+"&form="+metaForm+"&cl="+$("#clId").val() +"&period="+ $("#periodId").val(), function(data) {
 							
 							$("#history").dialog({
 								title: "History - "+metaForm +': ' + (""+metaDoc).toUpperCase(),
@@ -2105,7 +2101,7 @@ $(document).ready(function() {
 						$('.taskStatusGCDPO').css('border', '1px solid #000');
 						$.ajax({
 							   type: "POST",
-							   url: "updateForm.php?type=" + metaType+"&doc=" + metaDoc+"&form="+metaForm+"&status="+value+"&period="+ $("#periodId").val(),
+							   url: "actions/updateForm.php?type=" + metaType+"&doc=" + metaDoc+"&form="+metaForm+"&status="+value+"&period="+ $("#periodId").val(),
 							   data: $('#editStatusGCDPOForm').serialize(),
 							   success: function(data){
 									$('#editStatusGCDPO_status').val(0);
@@ -2225,7 +2221,7 @@ $(document).ready(function() {
 
 				$("#showHistoryLegal").click(function(){
 
-					$.getJSON("loadHistoryLegal.php?type=" + metaType+"&doc=" + metaDoc+"&form="+metaForm+"&cl="+$("#clId").val() +"&period="+ $("#periodId").val(), function(data) {
+					$.getJSON("actions/loadHistoryLegal.php?type=" + metaType+"&doc=" + metaDoc+"&form="+metaForm+"&cl="+$("#clId").val() +"&period="+ $("#periodId").val(), function(data) {
 						
 						$("#history").dialog({
 							title: "History - "+metaForm +': ' + (""+metaDoc).toUpperCase(),
@@ -2405,7 +2401,7 @@ $(document).ready(function() {
 
 					$("#showHistoryTerm").click(function(){
 
-						$.getJSON("loadHistoryTerm.php?type=" + metaType+"&form="+metaForm+"&cl="+$("#clId").val() +"&period="+ $("#periodId").val(), function(data) {
+						$.getJSON("actions/loadHistoryTerm.php?type=" + metaType+"&form="+metaForm+"&cl="+$("#clId").val() +"&period="+ $("#periodId").val(), function(data) {
 							
 							$("#history").dialog({
 								title: "History - "+metaForm,
@@ -2546,7 +2542,7 @@ $(document).ready(function() {
 
         //loadConclusions();
          
-        $.getJSON("loadForms.php?cl=" + $("#clId").val() +"&period="+ $("#periodId").val(), function(data) {
+        $.getJSON("actions/loadForms.php?cl=" + $("#clId").val() +"&period="+ $("#periodId").val(), function(data) {
 
         	isMonthly = data.isMonthly;
         	

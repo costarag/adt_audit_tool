@@ -1,0 +1,23 @@
+[{  
+    "value":"NE",  
+    "text":"NE"  
+},{  
+    "value":"OK",  
+    "text":"OK"  
+},{  
+    "value":"NA",  
+    "text":"NA",  
+    "selected":true  
+},{  
+    "value":"NE2",  
+    "text":"NE2"  
+},{  
+    "value":"NA2",  
+    "text":"NA2"  
+},{  
+    "value":"S",  
+    "text":"S"  
+},{  
+    "value":"-",  
+    "text":" - "  
+}]

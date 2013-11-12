@@ -3,17 +3,11 @@
 <title>ADT Tool (alpha) - AIESEC in Brazil</title>
 <link rel="stylesheet" href="res/css/header.css" />
 <script src="res/js/login.js"></script>
-<script type="text/javascript">
-			$(document).ready(function() {
-
-			});
-
-		</script>
 </head>
 
 <div id="bar">
 	<div id="headerLogo">
-		<img src="res/img/tna_logo_mini.png" /> ADT Tool
+		<img src="res/img/tna_logo_mini.png"/> ADT Tool
 	</div>
 	<div id="headerMenu">
 		<h4>&rsaquo;&rsaquo; Select LC and audit period</h4>
@@ -23,7 +17,7 @@
 	</div>
 	<?php 
 	if (isset($_SESSION['user']['id'])){
-		echo '<div id="headerLogin"><a href="logout.php">Log out</a></div>';
+		echo '<div id="headerLogin"><a href="login\logout.php">Log out</a></div>';
 	}
 	?>
 

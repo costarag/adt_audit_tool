@@ -1,0 +1,123 @@
+body {
+	font-family: Verdana;
+	font-size: 11px;
+	background-color: #f9f9f9;
+	padding:10px;
+	color: #0C0C0C;
+}
+
+h2 {font-weight:bold; }
+
+p span {color:#006600; font-weight:bold; }
+
+a, a:link, a:visited {color:#0000FF;}
+
+table {
+	font-family: Verdana;
+	font-size: 11px;
+}
+
+.extype {
+	text-align: center;
+}
+
+.available{
+	background-color: red;
+	color: #FFFFFF;
+}
+
+.realized{
+	background-color: green;
+	color: #FFFFFF;
+}
+
+.matched{
+	background-color: yellow;
+	color: #000000;
+}
+
+.expired{
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+.rejected{
+	background-color: #7030AA;
+	color: #FFFFFF;
+}
+
+.pending{
+	background-color: #C4BD97;
+	color: #000000;
+}
+
+.onhold{
+	background-color: #948A54;
+	color: #FFFFF;
+}
+
+.gip{
+	background-color: #FF5A05;
+	color: #FFFFFF;
+}
+
+.gcdp{
+	background-color: #00A5DC;
+	color: #FFFFFF;
+}
+
+.container {
+	width: 1024px;
+	margin: 0 auto;
+	background-color: #FFFFFF;
+	border: 2px solid #CECECE;
+}
+
+.searchbox {
+	width: 100%;
+	height: 250px;
+	border-bottom: 2px dashed #CCCCCC;
+}
+
+.header {
+	padding: 5px 0 0 5px;
+	margin: 0px auto;
+	vertical-align: middle;
+	height: 80px;
+	width: 1019px;
+	border-bottom: 2px dashed #CCCCCC;
+}
+
+.left {
+	padding: 5px 0 0 10px;
+	float: left;
+	width: 350px;
+	height: 90%;
+	border-right: 2px dashed #CCCCCC;
+}
+
+.right {
+	padding: 5px 0 0 10px;
+	width: 644px;
+	float: left;
+	height: 100%;
+}
+
+.footer {
+	height: 30px;
+	float: left;
+	width: 100%; 
+}
+
+.top {
+	height: 30%;
+	border-bottom: 2px dashed #CFCFCF;
+}
+
+.bottom {
+	height: 40%;
+}
+
+.light{
+	color: #CCCCCC;
+}
