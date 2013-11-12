@@ -11,7 +11,7 @@ switch (DB_CONF_SELECTED) {
 	case DB_CONF_LOCAL:
 		$_mainDB = 'localhost';
 		$_mainUser = 'developer';
-		$_mainPass = 'oc7ohWie';
+		$_mainPass = '*********';
 		$_mainPort = '3306';
 		$_mainSchema = 'adtaiesec';
 		break;
