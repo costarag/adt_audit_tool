@@ -1,10 +1,10 @@
 ## ADT - Audit Tool	
 
-ADT is a web system created to track status of relevant audit documents. The system grabs data from MyAIESEC.net, stores in a database and enable users visualize and/or edit status of exchange and legal documents. Splitted by areas.
+ADT is a system designed and implemented by me to track status of audit documents. The system grabs data from MyAIESEC.net, parses, converts and stores in a database and enable users visualize and edit status of exchange and legal documents. Divided by areas.
 
 ### Technologies
 
-Mostly coded in PHP and jQuery that connects to MySQL DB.
+Mostly coded in PHP (grab, parse, covert), jQuery and using a MySQL DB.
 
 ### How it works
 
